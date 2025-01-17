@@ -2,14 +2,14 @@
 # required
 #####
 
-variable "digital_ocean_token" {
-  description = "A Digital Ocean personal access token"
+variable "digitalocean_access_token" {
+  description = "A DigitalOcean personal access token"
   type        = string
 }
 
-variable "doppler_token_portae_astrales" {
+variable "doppler_service_token_portae_astrales" {
   type        = string
-  description = "A token to authenticate with the portae_astrales project on Doppler."
+  description = "A service token to authenticate with the portae_astrales project on Doppler."
 }
 
 #####

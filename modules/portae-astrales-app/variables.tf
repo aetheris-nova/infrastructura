@@ -7,7 +7,7 @@ variable "app_region" {
   type        = string
 }
 
-variable "digital_ocean_token" {
+variable "digitalocean_access_token" {
   description = "A DigitalOcean personal access token."
   type        = string
 }
@@ -17,7 +17,7 @@ variable "domain_name" {
   type        = string
 }
 
-variable "doppler_token" {
+variable "doppler_service_token" {
   description = "A Doppler service token used read secrets."
   type        = string
 }

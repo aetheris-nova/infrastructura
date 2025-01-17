@@ -20,7 +20,7 @@ resource "digitalocean_app" "portae_astrales_app" {
       env {
         key   = "DOPPLER_TOKEN"
         scope = "BUILD_TIME"
-        value = var.doppler_token
+        value = var.doppler_service_token
         type  = "SECRET"
       }
 
