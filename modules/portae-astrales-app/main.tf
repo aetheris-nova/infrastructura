@@ -14,8 +14,7 @@ resource "digitalocean_app" "app" {
     static_site {
       build_command = "pnpm -F @aetherisnova/portae-astrales build"
       name          = local.app_name
-      output_dir    = "/dist/client"
-      source_dir    = "/packages/portae-astrales"
+      output_dir    = "/packages/portae-astrales/dist/client"
 
       env {
         key   = "VITE_WORLD_API_HTTP_URL"
