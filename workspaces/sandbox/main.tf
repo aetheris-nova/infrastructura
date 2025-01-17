@@ -1,7 +1,7 @@
 locals {
   portae_astrales_domain = "portaeastrales.sandbox"
-  project_name = "sandbox"
-  repo_branch  = "beta"
+  project_name           = "sandbox"
+  repo_branch            = "beta"
 }
 
 #####
