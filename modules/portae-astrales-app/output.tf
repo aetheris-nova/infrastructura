@@ -1,3 +1,3 @@
 output "urn" {
-  value = digitalocean_app.portae_astrales_app.urn
+  value = digitalocean_app.app.urn
 }

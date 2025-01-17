@@ -3,7 +3,7 @@
 #####
 
 variable "digitalocean_access_token" {
-  description = "A DigitalOcean personal access token"
+  description = "A DigitalOcean personal access token."
   type        = string
 }
 
@@ -19,12 +19,12 @@ variable "doppler_service_token_portae_astrales" {
 # See https://slugs.do-api.dev/ for valid options.
 variable "region" {
   default     = "ams3"
-  description = "The region to deploy the infrastructure to"
+  description = "The region to deploy the infrastructure to."
   type        = string
 }
 
 variable "app_region" {
-  description = "The region to deploy the Apps to"
+  description = "The region to deploy the Apps to."
   type        = string
   default     = "ams"
 }

@@ -3,5 +3,9 @@ terraform {
     digitalocean = {
       source = "digitalocean/digitalocean"
     }
+
+    doppler = {
+      source = "dopplerhq/doppler"
+    }
   }
 }

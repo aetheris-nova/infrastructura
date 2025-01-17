@@ -2,7 +2,7 @@ locals {
   app_name = "portae-astrales-app"
 }
 
-resource "digitalocean_app" "portae_astrales_app" {
+resource "digitalocean_app" "app" {
   spec {
     name   = "${var.project_name}--${local.app_name}" # 2-32 character limit
     region = var.app_region
@@ -12,16 +12,23 @@ resource "digitalocean_app" "portae_astrales_app" {
     }
 
     static_site {
-      build_command = "doppler run --mount .env -- pnpm -F @aetherisnova/portae-astrales build"
+      build_command = "pnpm -F @aetherisnova/portae-astrales build"
       name          = local.app_name
       output_dir    = "/dist/client"
       source_dir    = "/packages/portae-astrales"
 
       env {
-        key   = "DOPPLER_TOKEN"
+        key   = "VITE_WORLD_API_HTTP_URL"
         scope = "BUILD_TIME"
-        value = var.doppler_service_token
-        type  = "SECRET"
+        value = nonsensitive(data.doppler_secrets.portae_astrales.map.VITE_WORLD_API_HTTP_URL)
+        type  = "GENERAL"
+      }
+
+      env {
+        key   = "VITE_WORLD_API_WS_URL"
+        scope = "BUILD_TIME"
+        value = nonsensitive(data.doppler_secrets.portae_astrales.map.VITE_WORLD_API_WS_URL)
+        type  = "GENERAL"
       }
 
       github {
