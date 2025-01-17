@@ -6,9 +6,11 @@ on:
       - main
     paths:
       - 'workspaces/sandbox/**'
+      - 'modules/portae-astrales-app/**'
   pull_request:
     paths:
       - 'workspaces/sandbox/**'
+      - 'modules/portae-astrales-app/**'
 
 
 permissions:

@@ -12,7 +12,8 @@ resource "digitalocean_app" "app" {
     }
 
     static_site {
-      build_command = "pnpm -F @aetherisnova/portae-astrales build"
+      build_command = "export PATH=$HOME/.foundry/bin:$PATH && pnpm -F @aetherisnova/portae-astrales build"
+      catchall_document = "index.html"
       name          = local.app_name
       output_dir    = "/packages/portae-astrales/dist/client"
 
