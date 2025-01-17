@@ -31,3 +31,8 @@ variable "repo_branch" {
   description = "The branch of the repo to use."
   type        = string
 }
+
+variable "zone" {
+  description = "The top-level domain name."
+  type        = string
+}
