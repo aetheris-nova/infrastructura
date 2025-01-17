@@ -25,8 +25,10 @@ resource "digitalocean_app" "portae_astrales_app" {
       }
 
       git {
-        branch         = var.repo_branch
-        deploy_on_push = true
+        branch = var.repo_branch
+        deploy_on_push {
+          enabled = true
+        }
         repo_clone_url = "https://github.com/aetheris-nova/structura-contractus.git"
       }
     }
