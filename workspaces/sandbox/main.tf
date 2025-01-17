@@ -1,6 +1,7 @@
 locals {
   portae_astrales_domain = "portaeastrales.sandbox.aetherisnova.org"
   project_name           = "sandbox"
+  repo_branch            = "beta"
 }
 
 #####
@@ -29,5 +30,5 @@ module "portae_astrales_app" {
   domain_name               = local.portae_astrales_domain
   doppler_service_token     = var.doppler_service_token_portae_astrales
   project_name              = local.project_name
-  repo_branch               = "beta"
+  repo_branch               = local.repo_branch
 }

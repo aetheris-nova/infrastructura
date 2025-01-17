@@ -9,13 +9,15 @@ resource "digitalocean_app" "app" {
 
     domain {
       name = var.domain_name
+      type = "PRIMARY"
+      zone = var.domain_name
     }
 
     static_site {
-      build_command = "export PATH=$HOME/.foundry/bin:$PATH && pnpm -F @aetherisnova/portae-astrales build"
+      build_command     = "export PATH=$HOME/.foundry/bin:$PATH && pnpm -F @aetherisnova/portae-astrales build"
       catchall_document = "index.html"
-      name          = local.app_name
-      output_dir    = "/packages/portae-astrales/dist/client"
+      name              = local.app_name
+      output_dir        = "/packages/portae-astrales/dist/client"
 
       env {
         key   = "VITE_WORLD_API_HTTP_URL"
