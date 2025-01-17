@@ -12,7 +12,7 @@ resource "digitalocean_app" "portae_astrales_app" {
     }
 
     static_site {
-      build_command = "doppler run --mount .env -- pnpm -F @aetherisnova/portae-astrales build:client"
+      build_command = "doppler run --mount .env -- pnpm -F @aetherisnova/portae-astrales build"
       name          = local.app_name
       output_dir    = "/dist/client"
       source_dir    = "/packages/portae-astrales"
@@ -27,7 +27,7 @@ resource "digitalocean_app" "portae_astrales_app" {
       github {
         branch         = var.repo_branch
         deploy_on_push = true
-        repo_clone_url = "https://github.com/aetheris-nova/structura-contractus.git"
+        repo           = "aetheris-nova/structura-contractus"
       }
     }
   }
