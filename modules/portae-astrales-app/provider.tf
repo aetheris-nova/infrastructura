@@ -1,3 +1,3 @@
 provider "digitalocean" {
-  token = var.digital_ocean_token
+  token = var.digitalocean_access_token
 }
