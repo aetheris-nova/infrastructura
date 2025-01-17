@@ -1,7 +1,7 @@
 locals {
-  portae_astrales_domain = "portaeastrales.sandbox.aetherisnova.org"
-  project_name           = "sandbox"
-  repo_branch            = "beta"
+  domain       = "aetherisnova.org"
+  project_name = "sandbox"
+  repo_branch  = "beta"
 }
 
 #####
@@ -27,8 +27,9 @@ module "portae_astrales_app" {
 
   app_region                = var.app_region
   digitalocean_access_token = var.digitalocean_access_token
-  domain_name               = local.portae_astrales_domain
+  domain_name               = "portaeastrales.sandbox.${local.domain}"
   doppler_service_token     = var.doppler_service_token_portae_astrales
   project_name              = local.project_name
   repo_branch               = local.repo_branch
+  zone                      = local.domain
 }

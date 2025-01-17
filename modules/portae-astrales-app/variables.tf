@@ -13,7 +13,7 @@ variable "digitalocean_access_token" {
 }
 
 variable "domain_name" {
-  description = "The domain name for the app."
+  description = "The domain name."
   type        = string
 }
 
@@ -29,5 +29,10 @@ variable "project_name" {
 
 variable "repo_branch" {
   description = "The branch of the repo to use."
+  type        = string
+}
+
+variable "zone" {
+  description = "The top-level domain name."
   type        = string
 }
