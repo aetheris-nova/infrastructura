@@ -5,26 +5,22 @@
 </div>
 
 <div align="center">
-  <h1 align="center">
-    Infrastructura
-  </h1>
+
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-brightgreen.svg)](./LICENSE)
+![Boundary workflow badge](https://github.com/aetheris-nova/infrastructura/actions/workflows/boundary.yml/badge.svg?branch=main)
+![Sandbox workflow badge](https://github.com/aetheris-nova/infrastructura/actions/workflows/sandbox.yml/badge.svg?branch=main)
+
 </div>
 
-<div align="center">
-  <a href="https://github.com/aetheris-nova/infrastructura/blob/main/LICENSE">
-    <img alt="GitHub license badge" src="https://img.shields.io/github/license/aetheris-nova/infrastructura">
-  </a>
-
-  <a href="https://github.com/aetheris-nova/infrastructura/actions/workflows/boundary.yml">
-    <img alt="Boundary workflow badge" src="https://github.com/aetheris-nova/infrastructura/actions/workflows/boundary.yml/badge.svg?branch=main" />
-  </a>
-</div>
-
----
+<h1 align="center">
+  Infrastructura
+</h1>
 
 <p align="center">
   The Infrastructura of the Ordo Aedificatorum contains the grimoire to command the very foundations of the Aetheris Nova's sacred machinations.
 </p>
+
+---
 
 ### Table of contents
 
