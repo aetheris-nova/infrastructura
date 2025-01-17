@@ -1,0 +1,30 @@
+#####
+# required
+#####
+
+variable "digital_ocean_token" {
+  description = "A Digital Ocean personal access token"
+  type        = string
+}
+
+variable "doppler_token_portae_astrales" {
+  type        = string
+  description = "A token to authenticate with the portae_astrales project on Doppler."
+}
+
+#####
+# optional
+#####
+
+# See https://slugs.do-api.dev/ for valid options.
+variable "region" {
+  default     = "ams3"
+  description = "The region to deploy the infrastructure to"
+  type        = string
+}
+
+variable "app_region" {
+  description = "The region to deploy the Apps to"
+  type        = string
+  default     = "ams"
+}

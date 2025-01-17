@@ -1,5 +1,5 @@
 #####
-# Required
+# required
 #####
 
 variable "app_region" {
@@ -24,5 +24,10 @@ variable "doppler_token" {
 
 variable "project_name" {
   description = "The name of the project."
+  type        = string
+}
+
+variable "repo_branch" {
+  description = "The branch of the repo to use."
   type        = string
 }
