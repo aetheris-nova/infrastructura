@@ -10,7 +10,6 @@ resource "digitalocean_app" "app" {
     domain {
       name = var.domain_name
       type = "PRIMARY"
-      zone = var.zone
     }
 
     static_site {

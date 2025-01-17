@@ -1,7 +1,7 @@
 locals {
-  domain       = "aetherisnova.org"
-  project_name = "sandbox"
-  repo_branch  = "beta"
+  portae_astrales_domain = "portaeastrales.sandbox"
+  project_name           = "sandbox"
+  repo_branch            = "beta"
 }
 
 #####
@@ -19,6 +19,17 @@ resource "digitalocean_project" "project" {
 }
 
 #####
+# dns
+#####
+
+resource "digitalocean_record" "portae_astrales_app_domain" {
+  domain = data.digitalocean_domain.domain.id
+  name   = local.portae_astrales_domain
+  type   = "CNAME"
+  value  = "${replace(module.portae_astrales_app.default_ingress, "https://", "")}."
+}
+
+#####
 # apps
 #####
 
@@ -27,9 +38,8 @@ module "portae_astrales_app" {
 
   app_region                = var.app_region
   digitalocean_access_token = var.digitalocean_access_token
-  domain_name               = "portaeastrales.sandbox.${local.domain}"
+  domain_name               = "${local.portae_astrales_domain}.${data.digitalocean_domain.domain.name}"
   doppler_service_token     = var.doppler_service_token_portae_astrales
   project_name              = local.project_name
   repo_branch               = local.repo_branch
-  zone                      = local.domain
 }
