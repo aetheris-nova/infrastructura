@@ -1,0 +1,26 @@
+name: "Sandbox"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'workspaces/sandbox/**'
+  pull_request:
+    paths:
+      - 'workspaces/sandbox/**'
+
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  default_workflow:
+    name: "Validate, Plan and Apply"
+    uses: ./.github/workflows/validate_plan_and_apply.yml
+    with:
+      workspace_name: "sandbox"
+    secrets:
+      TERRAFORM_API_TOKEN: ${{ secrets.TERRAFORM_API_TOKEN }}
