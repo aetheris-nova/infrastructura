@@ -16,7 +16,7 @@ resource "digitalocean_app" "app" {
       build_command     = "pnpm -F @aetherisnova/codex-aetherium build"
       catchall_document = "index.html"
       name              = local.app_name
-      output_dir        = "/packages/codex-aetherium/dist/client"
+      output_dir        = "/packages/codex-aetherium/dist"
 
       env {
         key   = "VITE_TITLE"
