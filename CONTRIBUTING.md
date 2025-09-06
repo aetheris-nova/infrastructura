@@ -1,6 +1,6 @@
 # Contributing Guide
 
-### Table Of Contents
+### Table of contents
 
 * [1. Commit messages](#1-commit-messages)
   * [1.1. Type](#11-type)
@@ -8,7 +8,7 @@
   * [1.3. Subject](#13-subject)
 * [2. Pull requests](#2-pull-requests)
 
-## 1. Commit Messages
+## 1. Commit messages
 
 Commit messages lean heavily towards the convention set out by [conventional commits](https://www.conventionalcommits.org).
 
@@ -42,7 +42,7 @@ Must be one of the following:
 
 ### 1.2. Scope
 
-A scope may be provided to a commit’s type, to provide additional contextual information and is contained within a parenthesis
+A scope may be provided to a commit’s type to provide additional contextual information and is contained within a parenthesis
 
 ### 1.3. Subject
 
@@ -50,18 +50,16 @@ The subject contains a succinct description of the change:
 
 * use the present tense ("Add feature" not "Added feature")
 * use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-* don't capitalise the first letter
+* don't capitalize the first letter
 * don't use a fullstop (.) at the end. <- Not this
 
 <sup>[Back to top ^](#table-of-contents)</sup>
 
-## 2. Pull Requests
+## 2. Pull requests
 
 1. Create a branch from the `main` branch and use the convention: `<feat|fix|build>/name-of-issue`.
 2. Once the code is ready to be merged into `main`, open a pull request.
-3. 
-> ⚠️**NOTE:** The title must conform to the conventional commit message format outlined above...
-
+> ⚠️**NOTE:** The title must conform to the conventional commit message format outlined above.
 3. To merge the PR, use the "Squash and merge" option. This is to keep the commit history clean and keep the commits on `main` with a 1:1 ratio with previous PRs.
 
 <sup>[Back to top ^](#table-of-contents)</sup>
